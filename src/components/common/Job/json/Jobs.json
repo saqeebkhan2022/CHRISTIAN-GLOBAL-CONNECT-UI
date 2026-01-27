@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "title": "Youth Ministry Coordinator",
+    "company": "St. Mary Church",
+    "location": "Mumbai, India",
+    "type": "full-time",
+    "category": "ministry",
+    "description": "Coordinate youth programs, events, and volunteer activities for the parish."
+  },
+  {
+    "id": "2",
+    "title": "Church Accountant",
+    "company": "Holy Cross Parish",
+    "location": "Delhi, India",
+    "type": "full-time",
+    "category": "ministry",
+    "description": "Manage financial records, donations, and accounting tasks for the parish."
+  },
+  {
+    "id": "3",
+    "title": "Digital Marketing Specialist",
+    "company": "Faith Media NGO",
+    "location": "Bangalore, India",
+    "type": "part-time",
+    "category": "ngo",
+    "description": "Create content, social media campaigns, and manage online presence for the NGO."
+  },
+  {
+    "id": "4",
+    "title": "Christian School Teacher",
+    "company": "Light of Faith School",
+    "location": "Chennai, India",
+    "type": "full-time",
+    "category": "company",
+    "description": "Teach English and Social Studies to middle school students in a Christian environment."
+  },
+  {
+    "id": "5",
+    "title": "Volunteer Coordinator",
+    "company": "Helping Hands NGO",
+    "location": "Mumbai, India",
+    "type": "internship",
+    "category": "ngo",
+    "description": "Manage volunteers, plan events, and track participation for NGO projects."
+  },
+  {
+    "id": "6",
+    "title": "Pastoral Assistant",
+    "company": "Sacred Heart Church",
+    "location": "Kolkata, India",
+    "type": "full-time",
+    "category": "ministry",
+    "description": "Assist the pastor with daily church activities, counseling, and parish events."
+  },
+  {
+    "id": "7",
+    "title": "Christian Counseling Intern",
+    "company": "Faith Counseling Center",
+    "location": "Hyderabad, India",
+    "type": "internship",
+    "category": "ngo",
+    "description": "Support counseling programs and assist in workshops for individuals and families."
+  },
+  {
+    "id": "8",
+    "title": "Administrative Assistant",
+    "company": "Grace Community Services",
+    "location": "Bangalore, India",
+    "type": "part-time",
+    "category": "company",
+    "description": "Provide administrative support to management and staff for smooth operations."
+  },
+  {
+    "id": "9",
+    "title": "Christian Content Writer",
+    "company": "Faith Media NGO",
+    "location": "Delhi, India",
+    "type": "full-time",
+    "category": "ngo",
+    "description": "Write articles, blog posts, and educational content aligned with Christian values."
+  },
+  {
+    "id": "10",
+    "title": "Music Minister",
+    "company": "St. Joseph Parish",
+    "location": "Chennai, India",
+    "type": "part-time",
+    "category": "ministry",
+    "description": "Lead music for church services, choirs, and special parish events."
+  }
+]

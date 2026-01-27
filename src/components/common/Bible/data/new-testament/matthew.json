@@ -1,0 +1,10 @@
+{
+  "book": "Matthew",
+  "chapters": {
+    "1": [
+      { "verse": 1, "text": "The book of the genealogy of Jesus Christ..." },
+      { "verse": 2, "text": "Abraham begat Isaac..." }
+    ],
+    "2": [{ "verse": 1, "text": "Now when Jesus was born in Bethlehem..." }]
+  }
+}
