@@ -40,7 +40,7 @@ const ProfilesPage = () => {
       const response = await MatrimonySearchService.searchProfiles(
         filters,
         page,
-        LIMIT
+        LIMIT,
       );
 
       if (response?.success) {
@@ -101,7 +101,7 @@ const ProfilesPage = () => {
     try {
       const response = await MatrimonyInterestService.sendInterest(
         profileId,
-        "Hi, I am interested in connecting with you!"
+        "Hi, I am interested in connecting with you!",
       );
 
       if (response?.success) {
@@ -207,13 +207,16 @@ const ProfilesPage = () => {
                     <div className="p-4 flex flex-col justify-between">
                       <div>
                         <h3 className="font-semibold text-lg text-gray-800">
-                          {profile.name}
+                          {profile.User.fullName}
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          {profile.age} years • {profile.denomination} •{" "}
-                          {profile.city.toUpperCase()},{" "}
-                          {/* {profile.state.toUpperCase()}, */}
-                          {profile.country.toUpperCase()}.
+                          {profile?.age && `${profile.age} years`}
+                          {profile?.denomination &&
+                            ` • ${profile.denomination}`}
+                          {profile?.city && ` • ${profile.city.toUpperCase()}`}
+                          {profile?.state && `, ${profile.state.toUpperCase()}`}
+                          {profile?.country &&
+                            `, ${profile.country.toUpperCase()}`}
                         </p>
                       </div>
 
@@ -226,7 +229,7 @@ const ProfilesPage = () => {
 
                           try {
                             const success = await handleSendInterest(
-                              profile.userId
+                              profile.userId,
                             ); // call API
                             if (success) {
                               // mark locally as sent
@@ -235,8 +238,8 @@ const ProfilesPage = () => {
                                 prev.map((p) =>
                                   p.userId === profile.userId
                                     ? { ...p, hasSentInterest: true }
-                                    : p
-                                )
+                                    : p,
+                                ),
                               );
                             }
                           } catch (err) {

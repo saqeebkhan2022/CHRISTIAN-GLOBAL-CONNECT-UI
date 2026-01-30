@@ -76,14 +76,14 @@ export default function MyProfile() {
     const totalPhotos = galleryPhotos.length + files.length;
     if (totalPhotos > 5) {
       alert(
-        `You can only upload maximum 5 photos. Currently you have ${galleryPhotos.length}`
+        `You can only upload maximum 5 photos. Currently you have ${galleryPhotos.length}`,
       );
       return;
     }
 
     try {
       const res = await MatrimonyProfileService.uploadGalleryPhotos(
-        Array.from(files)
+        Array.from(files),
       );
       if (res.success) {
         await fetchGalleryPhotos();
@@ -192,7 +192,7 @@ export default function MyProfile() {
 
                 <img
                   src={getFullImageUrl(
-                    editData?.profilePhotoUrl || profile?.profilePhotoUrl
+                    editData?.profilePhotoUrl || profile?.profilePhotoUrl,
                   )}
                   alt="Profile"
                   className="w-full h-full object-fit-cover rounded-3xl"
@@ -218,7 +218,7 @@ export default function MyProfile() {
                         try {
                           const res =
                             await MatrimonyProfileService.uploadProfilePhoto(
-                              file
+                              file,
                             );
 
                           if (res.success) {
@@ -519,7 +519,8 @@ export default function MyProfile() {
                       <option value="ORTHODOX">Orthodox</option>
                       <option value="PENTECOSTAL">Pentecostal</option>
                       <option value="EVANGELICAL">Evangelical</option>
-
+                      <option value="MORMON">Mormon</option>
+                      <option value="CSI">Csi</option>
                       <option value="METHODIST">Methodist</option>
                       <option value="PRESBYTERIAN">Presbyterian</option>
                       <option value="LUTHERAN">Lutheran</option>
@@ -536,6 +537,26 @@ export default function MyProfile() {
                 }
               />
 
+              <InfoRow
+                icon={<Baby />}
+                label="Chursh Belongs To"
+                value={
+                  editing ? (
+                    <input
+                      type="text"
+                      value={editData.churchBelongsTo || 0}
+                      onChange={(e) =>
+                        handleChange("churchBelongsTo", e.target.value)
+                      }
+                      className="border-b border-gray-300 w-full text-sm font-black text-slate-800"
+                    />
+                  ) : profile?.churchBelongsTo ? (
+                    `${profile.churchBelongsTo}`
+                  ) : (
+                    "No Church "
+                  )
+                }
+              />
               <InfoRow
                 icon={<Baby />}
                 label="Children"
@@ -575,7 +596,7 @@ export default function MyProfile() {
                             onClick={() =>
                               handleChange(
                                 "hobbies",
-                                editData.hobbies.filter((_, idx) => idx !== i)
+                                editData.hobbies.filter((_, idx) => idx !== i),
                               )
                             }
                             className="text-xs font-bold"
@@ -620,8 +641,8 @@ export default function MyProfile() {
                               handleChange(
                                 "interests",
                                 editData.interests.filter(
-                                  (_, index) => index !== idx
-                                )
+                                  (_, index) => index !== idx,
+                                ),
                               )
                             }
                             className="text-xs font-bold"
@@ -1009,7 +1030,7 @@ export default function MyProfile() {
                             onChange={(e) =>
                               handleChange(
                                 "heightPreferenceMin",
-                                e.target.value
+                                e.target.value,
                               )
                             }
                             className="border-b border-gray-300 w-1/2"
@@ -1020,7 +1041,7 @@ export default function MyProfile() {
                             onChange={(e) =>
                               handleChange(
                                 "heightPreferenceMax",
-                                e.target.value
+                                e.target.value,
                               )
                             }
                             className="border-b border-gray-300 w-1/2"
@@ -1045,7 +1066,7 @@ export default function MyProfile() {
                           onChange={(e) =>
                             handleChange(
                               "preferredQualification",
-                              e.target.value.split(",").map((x) => x.trim())
+                              e.target.value.split(",").map((x) => x.trim()),
                             )
                           }
                           className="border-b border-gray-300 w-full"
